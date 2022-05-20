@@ -1,0 +1,14 @@
+<div style="display: flex; justify-content: space-between;">
+<ul>
+  <li><h1>Bookmark Comment: <%= @bookmark.comment %></h1></li>
+  <li><h2>Movie: <%= @bookmark.movie.title %></h2></li>
+  <li><h2>List: <%= @bookmark.list.name %></h2></li>
+</ul>
+  <div style="border: 1px solid black; background-color: lightgray; padding: 10px;">
+    <%= link_to "Edit this bookmark", edit_bookmark_path(@bookmark) %>
+  </div>
+</div>
+
+<hr>
+<%= link_to "Back to bookmark", bookmarks_path %>
+<%= link_to "Delete this bookmark", bookmark_path(@bookmark.id), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>

@@ -1,0 +1,14 @@
+<div style="display: flex; justify-content: space-between;">
+  <h1><%= @movie.title %></h1>
+  <div style="border: 1px solid black; background-color: lightgray; padding: 10px;">
+    <%= link_to "Edit this movie", edit_movie_path(@movie) %>
+  </div>
+</div>
+
+<div style="background-color: lightgray; border-radius: 5px; padding: 10px 30px;">
+  <h2><%= @movie.overview %></h2>
+  <h2>Rating: <%= @movie.rating %></h2>
+</div>
+<hr>
+<%= link_to "Back to list", movies_path %>
+<%= link_to "Delete this movie", movie_path(@movie.id), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>

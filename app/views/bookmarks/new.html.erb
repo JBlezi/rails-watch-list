@@ -1,0 +1,6 @@
+<%= simple_form_for(@bookmark) do |f| %>
+  <%= f.input :comment %>
+  <%= f.input :list_id, collection: @lists.index%>
+  <%= f.input :movie_id, collection:  @movies.index%>
+  <%= f.button :submit %>
+<% end %>
