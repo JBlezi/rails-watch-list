@@ -1,7 +1,7 @@
 <h1>My Lists</h1>
-<%= cl_image_tag("v1653042811/opq3aikpkny4szldqmux", width: 400, height: 300, crop: :fill) %>
 <ul>
   <% @lists.each do |list| %>
+    <li><%= cl_image_tag("v1653042811/opq3aikpkny4szldqmux", width: 150, height: 150, crop: :thumb) %></li>
     <li><%= link_to list.name, list_path(list) %></li>
   <% end %>
 </ul>
