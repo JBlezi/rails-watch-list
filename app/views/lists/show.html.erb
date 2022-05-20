@@ -1,5 +1,6 @@
 <div style="display: flex; justify-content: space-between;">
   <h1><%= @list.name %></h1>
+  <%= cl_image_tag("v1653042811/opq3aikpkny4szldqmux", width: 400, height: 300, crop: :fill) %>
   <div style="border: 1px solid black; background-color: lightgray; padding: 10px;">
     <%= link_to "Edit this list", edit_list_path(@list) %>
   </div>
